@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+    @apply bg-gray-100
+}
+
+.nav {
+}
+
+.nav a {
+    @apply font-bold
+}
+
+.nav a.router-link-exact-active {
+    @apply text-blue-600
+}
+
+.message-r {
+    @apply ml-12 mr-2 border-blue-700;
+    border-radius: 0.75rem 0 0 0.75rem;
+    border-width: 0 4px 0 0;
+}
+
+.message-l {
+    @apply mr-12 border-blue-700;
+    border-radius: 0 0.75rem 0.75rem 0;
+    border-width: 0 0 0 4px;
+}

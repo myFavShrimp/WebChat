@@ -1,0 +1,7 @@
+uvicorn
+fastapi
+sqlalchemy
+fastapi-jwt-auth
+python-dotenv
+python-socketio
+websockets
