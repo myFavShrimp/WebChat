@@ -2,7 +2,7 @@
 
 Simple fullstack chat application using FastAPI, SQLAlchemy, socket.io, vue.js, tailwind.css and a bit of daisyui.
 
-![Preview](https://i.imgur.com/4bPQA0y.gif)
+![Preview](https://i.imgur.com/QRK3JBR.gif)
 
 ### Run the application:
 ```shell
