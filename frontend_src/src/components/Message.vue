@@ -7,7 +7,7 @@
       </div>
 
       <div class="p-1 bg-gray-200">
-        <div class="flex justify-between font-semibold px-2 space-x-4">
+        <div class="flex justify-between text-sm sm:text-base font-semibold px-2 space-x-4">
           <p>{{username}}</p>
           <p>{{time}}</p>
         </div>
@@ -34,8 +34,7 @@ export default {
     const { text, created_on, username } = toRefs(props.message)
     const timestamp = computed(() => {
       let time = new Date(created_on.value * 1000)
-      return time.toLocaleString()
-      // return time.format('DD.MM.YYYY HH:m:s')
+      return time.toLocaleString().replace(',', '')
     })
 
     return {

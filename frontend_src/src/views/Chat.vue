@@ -20,7 +20,7 @@
       </div>
 
       <div class="w-full h-12 flex justify-items-stretch space-x-2">
-        <input @keyup.enter="sendMessage" v-model="messageInput" type="text" placeholder="username" class="input input-primary input-bordered w-full flex-shrink">
+        <input @keyup.enter="sendMessage" v-model="messageInput" type="text" placeholder="Send Message" class="input input-primary input-bordered w-full flex-shrink">
         <div class="btn-group flex-grow flex-shrink-0">
 
           <button @click="clearMessageInput" class="btn btn-outline btn-md">
