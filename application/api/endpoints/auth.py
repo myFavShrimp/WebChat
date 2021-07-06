@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Response
 from fastapi_jwt_auth import AuthJWT
 from sqlalchemy.orm import Session
 
@@ -23,9 +23,10 @@ def post_login(login: schema.UserLogin,
 
 
 @auth_router.post('/logout', status_code=204, description='Removes all cookies from the browser',
-                  responses={401: {"model": schema.FeedbackMessage}})
+                  response_class=Response, responses={401: {"model": schema.FeedbackMessage}})
 def post_logout(Authorize: AuthJWT = Depends(), db: Session = Depends(get_db)):
     Authorize.jwt_required()
     jti = Authorize.get_raw_jwt()['jti']
     print(jti)
     access_token_blacklist_action.create(db, jti)
+    return
